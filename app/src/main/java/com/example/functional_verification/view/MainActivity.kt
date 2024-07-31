@@ -1,12 +1,11 @@
-package com.example.voiceinteracttest.view
+package com.example.functional_verification.view
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.NavHostFragment
-import com.example.voiceinteracttest.R
-import com.example.voiceinteracttest.databinding.ActivityMainBinding
+import com.example.functional_verification.R
+import com.example.functional_verification.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -24,10 +23,7 @@ class MainActivity : AppCompatActivity() {
         val navGraph = navInflater.inflate(R.navigation.nav_graph)
 
         navGraph.setStartDestination(R.id.main_fragment)
-        val bundle = Bundle().apply {
-            putBoolean("hasInitialized", false)
-            putParcelable("routeTrack", null)
-        }
+        val bundle = Bundle()
         navController.setGraph(navGraph, bundle)
     }
 }

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Voice Interact Test"
+rootProject.name = "Functional Verification"
 include ':app'

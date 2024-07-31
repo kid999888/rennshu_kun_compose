@@ -3,17 +3,16 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.safeargs)
     alias(libs.plugins.devtools.ksp)
-    alias(libs.plugins.mapsplatform.secrets.gradle.plugin.ksp)
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
 }
 
 android {
-    namespace 'com.example.voiceinteracttest'
+    namespace 'com.example.functional_verification'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.voiceinteracttest"
+        applicationId "com.example.functional_verification"
         minSdk 31
         targetSdk 34
         versionCode 200000001
@@ -53,38 +52,17 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.constraintlayout)
-    implementation(libs.drawerlayout)
     implementation(libs.material)
-    implementation(libs.androidx.viewpager2)
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.fragment.ktx)
-    implementation(libs.play.services.location)
-    annotationProcessor(libs.androidx.room.compiler)
-    ksp(libs.androidx.room.compiler)
-    implementation(libs.koin.core)
-    implementation(libs.koin.android)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.androidx.navigation)
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.recyclerview)
-    implementation(libs.google.maps)
-    implementation(libs.google.map.utils)
-    implementation(libs.google.maps.services)
-    implementation(libs.gson)
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.gson)
-    implementation(libs.okhttp)
-    implementation(libs.loggingInterceptor)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,14 +1,13 @@
-package com.example.voiceinteracttest.view.fragment
+package com.example.functional_verification.view.main.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.voiceinteracttest.databinding.FragmentMainBinding
+import com.example.functional_verification.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
-
     private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(

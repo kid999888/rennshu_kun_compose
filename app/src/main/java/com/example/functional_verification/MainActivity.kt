@@ -7,10 +7,18 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.lifecycleScope
+import com.example.functional_verification.data.room.dao.MessageListDao
+import com.example.functional_verification.data.room.entity.MessageListEntity
 import com.example.functional_verification.ui.screen.MainScreen
 import com.example.functional_verification.ui.theme.FunctionalVerificationDefaultTheme
+import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
+
+    private val messageListDao: MessageListDao by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -23,5 +31,28 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        lifecycleScope.launch {
+            // データベースバッチ処理
+            if (messageListDao.getAll().isEmpty()) {
+                insertNotificationData(messageListDao)
+            }
+        }
+
+    }
+
+    private suspend fun insertNotificationData(
+        messageListDao: MessageListDao,
+    ) {
+        val mockNotifications = listOf(
+            MessageListEntity(message = "a"),
+            MessageListEntity(message = "aa"),
+            MessageListEntity(message = "aaa"),
+            MessageListEntity(message = "aaaa"),
+            MessageListEntity(message = "aaaaa"),
+            MessageListEntity(message = "aaaaaa"),
+        )
+
+        messageListDao.insert(mockNotifications)
     }
 }

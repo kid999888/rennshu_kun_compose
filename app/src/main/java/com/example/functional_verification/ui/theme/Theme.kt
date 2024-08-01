@@ -27,7 +27,7 @@ private val LightColorScheme = lightColorScheme(
     // You can customize these colors if needed
 )
 
-private val Typography = Typography(
+private val MainTypography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
@@ -65,7 +65,7 @@ fun FunctionalVerificationDefaultTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = MaterialTheme.typography,
         content = content
     )
 }

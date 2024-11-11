@@ -9,7 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.lifecycleScope
 import com.example.functional_verification.data.room.dao.MessageListDao
-import com.example.functional_verification.data.room.entity.MessageListEntity
+import com.example.functional_verification.data.room.entity.MessageEntity
 import com.example.functional_verification.ui.screen.MainScreen
 import com.example.functional_verification.ui.theme.FunctionalVerificationDefaultTheme
 import kotlinx.coroutines.launch
@@ -45,12 +45,12 @@ class MainActivity : ComponentActivity() {
         messageListDao: MessageListDao,
     ) {
         val mockNotifications = listOf(
-            MessageListEntity(message = "a"),
-            MessageListEntity(message = "aa"),
-            MessageListEntity(message = "aaa"),
-            MessageListEntity(message = "aaaa"),
-            MessageListEntity(message = "aaaaa"),
-            MessageListEntity(message = "aaaaaa"),
+            MessageEntity(message = "a"),
+            MessageEntity(message = "aa"),
+            MessageEntity(message = "aaa"),
+            MessageEntity(message = "aaaa"),
+            MessageEntity(message = "aaaaa"),
+            MessageEntity(message = "aaaaaa"),
         )
 
         messageListDao.insert(mockNotifications)

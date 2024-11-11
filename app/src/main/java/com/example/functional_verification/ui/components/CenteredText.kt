@@ -1,7 +1,6 @@
 package com.example.functional_verification.ui.components
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -21,14 +20,5 @@ fun CenteredText(text: String) {
             style = MaterialTheme.typography.headlineMedium,
             textAlign = TextAlign.Center
         )
-    }
-}
-
-@Composable
-fun MessageList(messages: List<String>) {
-    Column {
-        messages.forEach { message ->
-            Text(text = message)
-        }
     }
 }

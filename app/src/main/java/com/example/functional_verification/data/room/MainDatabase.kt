@@ -6,12 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.functional_verification.data.room.dao.MessageListDao
-import com.example.functional_verification.data.room.entity.MessageListEntity
+import com.example.functional_verification.data.room.entity.MessageEntity
 
 @Database(
     entities =
     [
-        MessageListEntity::class,
+        MessageEntity::class,
     ], version = 1, exportSchema = false
 )
 @TypeConverters()

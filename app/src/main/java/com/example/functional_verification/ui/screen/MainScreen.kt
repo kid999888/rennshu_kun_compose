@@ -9,7 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.functional_verification.ui.navigation.BottomNavigation
-import com.example.functional_verification.ui.screen.dashboard.DashboardScreen
+import com.example.functional_verification.ui.screen.dashboard.BarCodeScannerScreen
 import com.example.functional_verification.ui.screen.home.HomeScreen
 import com.example.functional_verification.ui.screen.notifications.NotificationsScreen
 
@@ -25,7 +25,7 @@ fun MainScreen() {
             startDestination = "home",
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable("dashboard") { DashboardScreen() }
+            composable("dashboard") { BarCodeScannerScreen() }
             composable("home") { HomeScreen() }
             composable("notifications") { NotificationsScreen() }
         }

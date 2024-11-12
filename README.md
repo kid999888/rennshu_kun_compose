@@ -1,4 +1,4 @@
-# 練習くんアプリ(RennShu Kun Compose App)
+# 練習くんComposeアプリ(RennShu Kun Compose App)
 
 ## 説明(Description)
 

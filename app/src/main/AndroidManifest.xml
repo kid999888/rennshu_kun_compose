@@ -5,6 +5,10 @@
         android:name="android.hardware.camera"
         android:required="false" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 必需的网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 可选但推荐的网络状态检查权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".MainApplication"

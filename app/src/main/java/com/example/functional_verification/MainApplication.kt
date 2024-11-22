@@ -5,6 +5,7 @@ import com.example.functional_verification.data.api.DirectionAPIManager
 import com.example.functional_verification.data.repository.HomeRepository
 import com.example.functional_verification.data.room.MainDatabase
 import com.example.functional_verification.ui.screen.home.viewModel.HomeViewModel
+import com.example.functional_verification.viewModel.notifications.NotificationsViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -63,5 +64,6 @@ class MainApplication : Application() {
 
         // ViewModel
         viewModel { HomeViewModel(get()) }
+        viewModel { NotificationsViewModel() }
     }
 }

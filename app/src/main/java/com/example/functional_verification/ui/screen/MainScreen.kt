@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.functional_verification.ui.navigation.BottomNavigation
 import com.example.functional_verification.ui.screen.dashboard.BarCodeScannerScreen
 import com.example.functional_verification.ui.screen.home.HomeScreen
+import com.example.functional_verification.ui.screen.notifications.NotificationsDetailScreen
 import com.example.functional_verification.ui.screen.notifications.NotificationsScreen
 
 @Preview(showBackground = true, widthDp = 415, heightDp = 923)
@@ -27,7 +28,19 @@ fun MainScreen() {
         ) {
             composable("dashboard") { BarCodeScannerScreen() }
             composable("home") { HomeScreen() }
-            composable("notifications") { NotificationsScreen() }
+            composable("notifications") {
+                NotificationsScreen(
+                    navController,
+                )
+            }
+            composable("notifications_detail") {
+                NotificationsDetailScreen { message ->
+                    navController.previousBackStackEntry
+                        ?.savedStateHandle
+                        ?.set("message", message)
+                    navController.popBackStack()
+                }
+            }
         }
     }
 }

@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.functional_verification'
+    namespace 'com.example.rennshukun_compose'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.functional_verification"
+        applicationId "com.example.rennshukun_compose"
         minSdk 29
         targetSdk 34
         versionCode 200000001

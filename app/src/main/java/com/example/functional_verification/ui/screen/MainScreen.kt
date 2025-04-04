@@ -9,12 +9,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.functional_verification.ui.navigation.BottomNavigation
-import com.example.functional_verification.ui.screen.dashboard.BarCodeScannerScreen
+import com.example.functional_verification.ui.screen.barCodeScanner.BarCodeScannerScreen
 import com.example.functional_verification.ui.screen.home.HomeScreen
 import com.example.functional_verification.ui.screen.notifications.NotificationsDetailScreen
 import com.example.functional_verification.ui.screen.notifications.NotificationsScreen
 
-@Preview(showBackground = true, widthDp = 415, heightDp = 923)
+@Preview(showBackground = true, widthDp = 415, heightDp = 923, showSystemUi = true)
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
@@ -26,9 +26,13 @@ fun MainScreen() {
             startDestination = "home",
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable("dashboard") { BarCodeScannerScreen() }
-            composable("home") { HomeScreen() }
-            composable("notifications") {
+            composable(route = "barCodeScanner") {
+                BarCodeScannerScreen()
+            }
+            composable(route = "home") {
+                HomeScreen()
+            }
+            composable(route = "notifications") {
                 NotificationsScreen(
                     navController,
                 )
@@ -44,7 +48,3 @@ fun MainScreen() {
         }
     }
 }
-
-
-
-

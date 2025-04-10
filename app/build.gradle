@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace 'com.example.rennshukun_compose'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.rennshukun_compose"

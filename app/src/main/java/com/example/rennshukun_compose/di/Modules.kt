@@ -13,9 +13,9 @@ import android.app.Application
 import com.example.rennshukun_compose.data.api.DirectionAPIManager
 import com.example.rennshukun_compose.data.repository.HomeRepository
 import com.example.rennshukun_compose.data.room.MainDatabase
-import com.example.rennshukun_compose.ui.screen.bar_code_scanner.viewModel.BarCodeScannerViewModel
-import com.example.rennshukun_compose.ui.screen.home.viewModel.HomeViewModel
-import com.example.rennshukun_compose.ui.screen.notifications.viewModel.NotificationsViewModel
+import com.example.rennshukun_compose.ui.screen.bar_code_scanner.view_model.BarCodeScannerViewModel
+import com.example.rennshukun_compose.ui.screen.home.view_model.HomeViewModel
+import com.example.rennshukun_compose.ui.screen.notifications.view_model.NotificationsViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext

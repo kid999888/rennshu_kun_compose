@@ -15,7 +15,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.rennshukun_compose.ui.screen.bar_code_scanner.BarCodeScannerScreen
-import com.example.rennshukun_compose.ui.screen.bar_code_scanner.viewModel.BarCodeScannerViewModel
+import com.example.rennshukun_compose.ui.screen.bar_code_scanner.view_model.BarCodeScannerViewModel
 import com.example.rennshukun_compose.ui.screen.home.HomeScreen
 import com.example.rennshukun_compose.ui.screen.notifications.NotificationsDetailScreen
 import com.example.rennshukun_compose.ui.screen.notifications.NotificationsScreen

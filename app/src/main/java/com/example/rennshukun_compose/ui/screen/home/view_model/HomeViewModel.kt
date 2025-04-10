@@ -1,4 +1,4 @@
-package com.example.rennshukun_compose.ui.screen.home.viewModel
+package com.example.rennshukun_compose.ui.screen.home.view_model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

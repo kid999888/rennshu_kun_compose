@@ -7,15 +7,15 @@
  * Description:
  */
 
-package com.example.rennshukun_compose.viewModel.notifications
+package com.example.rennshukun_compose.ui.screen.notifications.viewModel
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.rennshukun_compose.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class NotificationsViewModel() : ViewModel() {
+class NotificationsViewModel() : BaseViewModel() {
     private val _message = MutableStateFlow<String?>(null)
     val message = _message.asStateFlow()
 

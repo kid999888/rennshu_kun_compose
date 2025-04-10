@@ -1,7 +1,7 @@
 package com.example.rennshukun_compose.navigation
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material.icons.filled.Camera
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Icon
@@ -17,19 +17,29 @@ import androidx.navigation.compose.rememberNavController
 fun BottomNavigation(navController: NavHostController) {
     NavigationBar {
         NavigationBarItem(
-            icon = { Icon(Icons.Default.DateRange, contentDescription = "Dashboard") },
-            label = { Text("Dashboard") },
-            selected = navController.currentDestination?.route == "dashboard",
-            onClick = { navController.navigate("dashboard") }
+            icon = {
+                Icon(
+                    imageVector = Icons.Filled.Camera,
+                    contentDescription = "barCodeScanner"
+                )
+            },
+            label = { Text("BarCodeScanner") },
+            selected = navController.currentDestination?.route == "barCodeScanner",
+            onClick = { navController.navigate("barCodeScanner") }
         )
         NavigationBarItem(
-            icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
+            icon = { Icon(imageVector = Icons.Default.Home, contentDescription = "Home") },
             label = { Text("Home") },
             selected = navController.currentDestination?.route == "home",
             onClick = { navController.navigate("home") }
         )
         NavigationBarItem(
-            icon = { Icon(Icons.Default.Notifications, contentDescription = "Notifications") },
+            icon = {
+                Icon(
+                    imageVector = Icons.Default.Notifications,
+                    contentDescription = "Notifications"
+                )
+            },
             label = { Text("Notifications") },
             selected = navController.currentDestination?.route == "notifications",
             onClick = { navController.navigate("notifications") }

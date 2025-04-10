@@ -13,8 +13,9 @@ import android.app.Application
 import com.example.rennshukun_compose.data.api.DirectionAPIManager
 import com.example.rennshukun_compose.data.repository.HomeRepository
 import com.example.rennshukun_compose.data.room.MainDatabase
+import com.example.rennshukun_compose.ui.screen.bar_code_scanner.viewModel.BarCodeScannerViewModel
 import com.example.rennshukun_compose.ui.screen.home.viewModel.HomeViewModel
-import com.example.rennshukun_compose.viewModel.notifications.NotificationsViewModel
+import com.example.rennshukun_compose.ui.screen.notifications.viewModel.NotificationsViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -63,4 +64,5 @@ val appModules = module {
     // ViewModel
     viewModel { HomeViewModel(get()) }
     viewModel { NotificationsViewModel() }
+    viewModel { BarCodeScannerViewModel() }
 }

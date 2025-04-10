@@ -5,7 +5,7 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.rennshukun_compose.ui.screen.home.viewModel.HomeViewModel
+import com.example.rennshukun_compose.ui.screen.home.view_model.HomeViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Preview(showBackground = true, widthDp = 415, heightDp = 923)

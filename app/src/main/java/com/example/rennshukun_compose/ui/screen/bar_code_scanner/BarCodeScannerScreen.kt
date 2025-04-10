@@ -35,7 +35,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.navigation.NavHostController
 import com.example.rennshukun_compose.ui.components.bar_code_scanner.CustomScanFrame
 import com.example.rennshukun_compose.ui.components.bar_code_scanner.setupCameraPreview
-import com.example.rennshukun_compose.ui.screen.bar_code_scanner.viewModel.BarCodeScannerViewModel
+import com.example.rennshukun_compose.ui.screen.bar_code_scanner.view_model.BarCodeScannerViewModel
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
 

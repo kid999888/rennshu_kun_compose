@@ -7,7 +7,7 @@
  * Description:
  */
 
-package com.example.rennshukun_compose.ui.screen.notifications.viewModel
+package com.example.rennshukun_compose.ui.screen.notifications.view_model
 
 import androidx.lifecycle.viewModelScope
 import com.example.rennshukun_compose.base.BaseViewModel

@@ -7,7 +7,7 @@
  * Description: バーコードスキャナーViewModel
  */
 
-package com.example.rennshukun_compose.ui.screen.bar_code_scanner.viewModel
+package com.example.rennshukun_compose.ui.screen.bar_code_scanner.view_model
 
 import com.example.rennshukun_compose.base.BaseViewModel
 

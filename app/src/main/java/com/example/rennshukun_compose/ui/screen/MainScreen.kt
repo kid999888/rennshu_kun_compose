@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.example.rennshukun_compose.navigation.BottomNavigation
 import com.example.rennshukun_compose.navigation.MainNavHost
-import com.example.rennshukun_compose.ui.screen.bar_code_scanner.viewModel.BarCodeScannerViewModel
+import com.example.rennshukun_compose.ui.screen.bar_code_scanner.view_model.BarCodeScannerViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Preview(showBackground = true, widthDp = 415, heightDp = 923, showSystemUi = true)

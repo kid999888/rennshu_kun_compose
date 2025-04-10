@@ -1,4 +1,4 @@
-package com.example.rennshukun_compose.ui.navigation
+package com.example.rennshukun_compose.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange

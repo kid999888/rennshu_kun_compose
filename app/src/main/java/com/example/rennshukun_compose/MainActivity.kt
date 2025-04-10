@@ -75,7 +75,7 @@ class MainActivity : ComponentActivity() {
                 this,
                 Manifest.permission.CAMERA
             ) == PackageManager.PERMISSION_GRANTED -> {
-                // 已经有权限
+                // パーミッション許可の場合
             }
 
             else -> {

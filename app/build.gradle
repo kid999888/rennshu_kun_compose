@@ -45,6 +45,25 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    // Lintの設定
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation', 'HardcodedText'
+        enable 'ComposeUnstableCollections', 'ComposableNaming', 'ComposableLambdaParameterNaming',
+                'ComposableLambdaParameterPosition', 'ComposableParamOrder', 'CompositionLocalAllowlist'
+    }
+}
+
+// コンポーズコンパイラレポートの有効化
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        freeCompilerArgs += [
+                "-P",
+                "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=${project.buildDir.absolutePath}/compose_compiler",
+                "-P",
+                "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=${project.buildDir.absolutePath}/compose_compiler"
+        ]
+    }
 }
 
 dependencies {
@@ -94,6 +113,10 @@ dependencies {
     implementation(libs.retrofit.gson)
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
+
+    // Koin検証ツール
+    implementation libs.koin.annotations
+    ksp libs.koin.ksp.compiler
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

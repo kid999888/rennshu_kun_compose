@@ -29,6 +29,12 @@ gsonVersion = "2.10.1"
 retrofit = "2.11.0"
 okhttp = "4.12.0"
 loggingInterceptor = "4.12.0"
+# 静的解析ツール
+ktlint-gradle = "11.3.1"
+ktlint-core = "0.48.2"
+detekt = "1.23.0"
+twitter-compose-rules = "0.0.26"
+koin-annotations = "1.2.0"
 
 
 [libraries]
@@ -59,26 +65,28 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-android-compat = { module = "io.insert-koin:koin-android-compat", version.ref = "koin" }
 koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation", version.ref = "koin" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
-# 添加 CameraX 依赖
+# CameraX
 androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
 androidx-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
 androidx-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
-
-# 添加 ML Kit 依赖
+# ML Kit
 mlkit-barcode-scanning = { group = "com.google.mlkit", name = "barcode-scanning", version.ref = "mlkit" }
-
 # Gppgle Map
 google-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "google-maps" }
 google-map-utils = { group = "com.google.maps.android", name = "android-maps-utils", version.ref = "google-map-utils" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 google-maps-services = { module = "com.google.maps:google-maps-services", version.ref = "google-maps-services" }
-
 # API request
 gson = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 loggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+# 静的解析ツール
+detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+detekt-compose-rules = { group = "com.twitter.compose.rules", name = "detekt", version.ref = "twitter-compose-rules" }
+koin-annotations = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koin-annotations" }
+koin-ksp-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-annotations" }
 
 
 
@@ -89,4 +97,8 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtoolsKsp" }
 mapsplatform-secrets-gradle-plugin-ksp = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "mapsplatform" }
+# 静的解析ツール
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint-gradle" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+
 

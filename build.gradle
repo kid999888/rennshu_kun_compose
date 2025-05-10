@@ -3,4 +3,48 @@ plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.mapsplatform.secrets.gradle.plugin.ksp) apply false
+    alias(libs.plugins.ktlint)
+    alias(libs.plugins.detekt)
+}
+
+// 在子项目中应用
+subprojects {
+    apply plugin: rootProject.libs.plugins.ktlint.get().pluginId
+    apply plugin: rootProject.libs.plugins.detekt.get().pluginId
+
+    // KtLintの設定
+    ktlint {
+        version = libs.versions.ktlint.core.get()
+        android = true
+        outputToConsole = true
+        ignoreFailures = false
+        enableExperimentalRules = true
+        filter {
+            exclude { element -> element.file.path.contains("generated/") }
+        }
+    }
+
+    detekt {
+        // デテクト設定ファイルの指定
+        config = files("${project.rootDir}/config/detekt/detekt.yml")
+        // ベースラインファイルの指定（既存問題の無視）
+        baseline = file("${project.rootDir}/config/detekt/baseline.xml")
+        // Composeのルールを含める
+        buildUponDefaultConfig = true
+    }
+
+    dependencies {
+        detektPlugins libs.detekt.formatting
+        // Compose特定のルール
+        detektPlugins libs.detekt.compose.rules
+    }
+}
+
+// すべての静的チェックを実行するタスク
+tasks.register('staticCheck') {
+    group = 'verification'
+    description = 'すべての静的コード分析を実行します'
+    dependsOn ':app:ktlintCheck'
+    dependsOn ':app:detekt'
+    dependsOn ':app:lint'
 }
